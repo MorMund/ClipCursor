@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipCursor", "ClipCursor\ClipCursor.csproj", "{37280AA6-A3B7-445A-BF3F-4D165B234217}"
 EndProject
 Global
@@ -9,12 +11,15 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Debug|x86.ActiveCfg = Release|x86
-		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Debug|x86.Build.0 = Release|x86
+		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Debug|x86.ActiveCfg = Debug|x86
+		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Debug|x86.Build.0 = Debug|x86
 		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Release|x86.ActiveCfg = Release|x86
 		{37280AA6-A3B7-445A-BF3F-4D165B234217}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C01C319-8915-4E3F-AEF7-A52F6B4112D8}
 	EndGlobalSection
 EndGlobal

@@ -26,6 +26,7 @@ namespace ClipCursor
     using System.Text;
     using System.Text.RegularExpressions;
     using System.Threading;
+    using System.Linq;
 
     /// <summary>
     /// Contains methods for constraining the cursor to a window as well as a command-line tool for this task.
@@ -35,6 +36,8 @@ namespace ClipCursor
         private const int WindowTitleMaxLength = 50; // Length window titles get truncated to
         private const int ValidateHandleThreshold = 10; // How often the user selected window handle gets validate
         private const int ClippingRefreshInterval = 100; // How often the clipped area is refreshed in milliseconds
+
+        private static bool verboseOutput = false;
 
         #region EnumerationsAndFlags
         private enum GetWindowLongIndex : int
@@ -61,10 +64,11 @@ namespace ClipCursor
         /// <summary>
         /// Runs the command line program.
         /// </summary>
-        public static void Main()
+        public static void Main(string[] args)
         {
+            verboseOutput = args.Contains("--verbose");
+
             List<IntPtr> windowHandles = null;
-            int selectedIndex;
             string selectedIndexStr;
             IntPtr selectedWindowHandle;
             string selectedWindowTitle = string.Empty;
@@ -77,7 +81,7 @@ namespace ClipCursor
                 selectedIndexStr = Console.ReadLine();
 
                 // Validate user choice
-                if (!int.TryParse(selectedIndexStr, out selectedIndex) ||
+                if (!int.TryParse(selectedIndexStr, out int selectedIndex) ||
                     selectedIndex < 1 ||
                     selectedIndex > windowHandles.Count)
                 {
@@ -200,6 +204,11 @@ namespace ClipCursor
 
             foreach (Process process in processList)
             {
+                if(verboseOutput)
+                {
+                    Console.WriteLine($"{process.ProcessName}: {process.MainWindowHandle}|{process.MainWindowTitle}");
+                }
+
                 if (!string.IsNullOrEmpty(process.MainWindowTitle))
                 {
                     if (outputWindowNames)

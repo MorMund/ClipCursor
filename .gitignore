@@ -1,6 +1,7 @@
 ### Caches
 *.Cache
 *.suo
+.vs/
 ### Binaries
 */bin
 */obj
