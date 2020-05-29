@@ -1,22 +1,4 @@
-﻿// <copyright file="ClipCursor.cs">
-// Copyright (c) 2016 All Right Reserved
-//
-// THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
-// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
-// PARTICULAR PURPOSE.
-// </copyright>
-// 
-// <author>DeadlySurprise</author>
-// <author>b2ccf637a919f68258cf3bfa7599fd80</author>
-// <email>d3adlysurprise@gmail.com</email>
-// <date>2016-10-18</date>
-// <summary>Restricts the cursor from leaving the client area of a user selected window.</summary>
-
-// Feel free to reuse or modify any of this code. 
-// Write an email in case of questions or problems.
-
-namespace ClipCursor
+﻿namespace ClipCursor
 {
     using System;
     using System.Collections.Generic;
